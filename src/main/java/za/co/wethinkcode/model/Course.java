@@ -50,9 +50,9 @@ public class Course {
     // - otherwise add student and return true
 
     public boolean enrolStudent(Student student){
-        if (enrolledStudents.size() >= maxCapacity) return false;
+        if (this.enrolledStudents.size() >= this.maxCapacity) return false;
 
-        for (Student s: enrolledStudents){
+        for (Student s: this.enrolledStudents){
             if (s.getId() == student.getId()) return false;
         }
         enrolledStudents.add(student);
